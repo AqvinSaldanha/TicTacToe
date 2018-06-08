@@ -19,6 +19,12 @@ namespace com.aqvin.tictactoe
 		[NonSerialized]
 		public Sprite m_overlaySprite;
 
+		public virtual void Initialize (Cell.SelectionStatus a_selectionStatus, Sprite a_overlaySprite)
+		{
+			m_statusToSet = a_selectionStatus;
+			m_overlaySprite = a_overlaySprite;
+		}
+
 		/// <summary>
 		/// Useful to determine if the current player is human or not. This is true by default. 
 		/// To modify this, override this function in a derived class: See AI.cs.

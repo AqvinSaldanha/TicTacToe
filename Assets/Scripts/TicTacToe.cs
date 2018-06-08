@@ -43,12 +43,10 @@ namespace com.aqvin.tictactoe
 			});
 
 			m_player1 = new Player ();
-			m_player1.m_statusToSet = Cell.SelectionStatus.Player1;
-			m_player1.m_overlaySprite = m_xSprite;
+			m_player1.Initialize (Cell.SelectionStatus.Player1, m_xSprite);
 
 			m_player2 = new AI ();
-			m_player2.m_statusToSet = Cell.SelectionStatus.Player2;
-			m_player2.m_overlaySprite = m_oSprite; 
+			m_player2.Initialize (Cell.SelectionStatus.Player2, m_oSprite);
 
 			m_currentPlayer = m_player2;
 		}  
@@ -102,6 +100,10 @@ namespace com.aqvin.tictactoe
 
 		}
 
+		/// <summary>
+		/// Decide what happens when a cell is selected
+		/// </summary>
+		/// <param name="a_cellIndex">Index of selected cell.</param>
 		void HandleSelection(int a_cellIndex)
 		{
 			m_audioSource.PlayOneShot (m_selectSound);
