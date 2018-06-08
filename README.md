@@ -3,7 +3,9 @@ Unity implementation of classic Tic Tac Toe game.
 
 Unity version: 2017.3.0f3
 
-This is a single player game. AI is currently selecting one of the random available cells.
+This is a single player game. 
+
+AI is built using HashSet data structure. Next I will use same logic to improve validation of game logic.
 
 The cells are implemented using unity 2d sprites. Each cell is represented as an element in a single dimensional List.
 
