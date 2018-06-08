@@ -89,13 +89,6 @@ namespace com.aqvin.tictactoe
 		{
 			if (!m_mySelectedIndex.Contains (a_index)) {
 				m_humanSelectedIndex.Add (a_index);
-
-				string l_temp = "";
-				foreach (int i in m_humanSelectedIndex) {
-
-					l_temp += i + " , ";
-				}
-				Debug.LogError ("Human got: " + l_temp);
 			}
 			m_availableIndex.Remove (a_index);
 		}
